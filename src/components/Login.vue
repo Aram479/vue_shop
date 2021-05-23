@@ -84,16 +84,14 @@ export default {
         //获取接口数据 ,data解构语法，表示获取接口数据中的data数据
         //login是接口地址，其中有两个参数username和password，必需要传入参数，所以后面紧跟this.loginForm
         const { data } = await this.$http.post("login", this.loginForm);
+        //data.meta.status: 200表示登陆成功，反之失败
+        //data.meta.msg会自动判断密码错误还是用户名错误
+        if (data.meta.status != 200) return this.$message.error(data.meta.msg);
         //sessionStorage 用于临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据
         window.sessionStorage.setItem("token", data.data.token);
         this.$router.push("/home");
-        console.log(data.data.token)
-        //data.meta.status: 200表示登陆成功，反之失败
-        if (data.meta.status !== 200) {
-          return this.$message.error("登录失败");
-        } else {
-          return this.$message.success("登录成功");
-        }
+        this.$message.success("登录成功");
+        
       });
     },
   },
