@@ -54,6 +54,10 @@ a {
 .right {
   float: right;
 }
+#app {
+  min-width: 1300px;
+}
+
 
 /* ElementUI面包屑组件 */
 .el-breadcrumb {
@@ -63,7 +67,6 @@ a {
 /* ElementUI卡片组件 */
 .el-card {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15) !important;
-  min-width: 1000px
 }
 /* ElementUI表格组件 */
 .el-table {
@@ -72,5 +75,9 @@ a {
 /* ElementUI 分页组件 */
 .el-pagination {
   margin-top: 15px;
+}
+.vcenter {
+  display: flex;
+  align-items: center;
 }
 

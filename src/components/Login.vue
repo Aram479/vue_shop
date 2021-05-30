@@ -137,7 +137,7 @@ export default {
 }
 .btns {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .login_form {
   position: absolute;
