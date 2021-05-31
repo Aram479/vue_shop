@@ -80,4 +80,10 @@ a {
   display: flex;
   align-items: center;
 }
+.el-alert {
+  margin-bottom: 20px !important;
+}
+.el-tabs {
+  margin-top: 20px !important;
+}
 
